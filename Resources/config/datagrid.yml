@@ -108,33 +108,33 @@ datagrid:
         action_configuration: @ibnab_pmanager.pdftemplate.datagrid_helper->getActionConfigurationClosure
         views_list : @ibnab_pmanager.pdftemplate.datagrid_view_list
         options: { entityHint: PDF template }
-    contacts-grid:
-        properties:
-            getpdf_link:
-                type:       url
-                route:      pmanager_default_create
-                params:     [ id ]
-        actions:
-            getpdf:
-                type: getpdf
-                data_identifier: c.id
-                frontend_handle: dialog
-                frontend_options:
-                    dialogOptions:
-                        title: @translator->trans(ibnab.pmanager.dialog.title)
-                        width: 500
-                        autoResize: true
-                        modal: true
-                        minHeight: 100
-                        allowMaximize: true
-                        allowMinimize: true
-                        dblclick: 'maximize'
-                        maximizedHeightDecreaseBy: 'minimize-bar'
-                entityName: %orocrm_contact.entity.class%
-                acl_resource: pmanager_defaut_create
-                label: ibnab.pmanager.grid_action.getpdf_label
-                icon: file-alt
-                link: getpdf_link
+#    contacts-grid:
+#        properties:
+#            getpdf_link:
+#                type:       url
+#                route:      pmanager_default_create
+#                params:     [ id ]
+#        actions:
+#            getpdf:
+#                type: getpdf
+#                data_identifier: c.id
+#                frontend_handle: dialog
+#                frontend_options:
+#                    dialogOptions:
+#                        title: @translator->trans(ibnab.pmanager.dialog.title)
+#                        width: 500
+#                        autoResize: true
+#                        modal: true
+#                        minHeight: 100
+#                        allowMaximize: true
+#                        allowMinimize: true
+#                        dblclick: 'maximize'
+#                        maximizedHeightDecreaseBy: 'minimize-bar'
+#                entityName: %orocrm_contact.entity.class%
+#                acl_resource: pmanager_defaut_create
+#                label: ibnab.pmanager.grid_action.getpdf_label
+#                icon: file-alt
+#                link: getpdf_link
 #    magento-order-grid:
 #        properties:
 #            getpdf_link:
